@@ -1,0 +1,61 @@
+@import "./common.less";
+
+#mainWindow {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    padding-top: 12px;
+    border-radius: 10px;
+    background-color: white;
+    border: solid thin @deep-gray;
+}
+
+#title {
+    -webkit-app-region: drag;
+
+    margin: auto;
+    left: 20px;
+    right: 20px;
+
+    height: 21px;
+    position: absolute;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    bottom: 70px;
+
+    color: @font-color-mid;
+    font-size: 18px;
+    overflow: auto;
+    border-top: solid 1px @deep-gray;
+    border-bottom: solid 1px @deep-gray;
+}
+
+.light-line {
+    height: 55px;
+    margin-left: 40px;
+    border-top: solid 1px @light-gray;    
+}
+
+#proxies {
+    margin-top: 10px;
+    padding: 0 12px 0 12px;
+}
+
+.opt-img {
+    -webkit-app-region: no-drag;
+
+    margin-left: 8px;
+    float: right;
+    font-size: 18px;
+}
+
+#progress {
+    position: absolute;
+    bottom: 9px;    
+    left: 203px;
+}

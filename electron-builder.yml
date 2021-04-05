@@ -1,0 +1,48 @@
+appId: org.clash
+copyright: Copyright ©2020 SzeLu
+productName: EleClash
+# asar 加密
+asar: true
+extends: null
+icon: electron/window/image/App512.png
+
+# 目录
+directories:
+  buildResources: dist/static/
+  output: target/
+
+files:
+  - package.json
+  - main.js
+  - dist/
+  - node_modules/
+  - electron/
+
+dmg:
+  contents:
+    - type: link
+      path: /Applications
+      x: 410
+      y: 150
+    - type: file
+      x: 130
+      y: 150
+
+win:
+  artifactName: ${name}-${version}.${ext}
+  target: nsis
+
+mac:
+  artifactName: ${name}-${version}.${ext}
+  target: dmg
+
+linux:
+  artifactName: ${name}-${version}.${ext}
+  target: deb
+
+nsis: 
+  oneClick: false
+  # 允许修改安装路径
+  allowToChangeInstallationDirectory: true
+  # 安装给所有用户
+  perMachine: false
