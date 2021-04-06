@@ -1,6 +1,6 @@
 appId: org.clash
 copyright: Copyright ©2020 SzeLu
-productName: EleClash
+productName: ClashXUI
 # asar 加密
 asar: true
 extends: null

@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       pageOffset: 0,
-      appName: 'EleClash'
+      appName: 'ClashXUI'
     }
   },
   methods: {
