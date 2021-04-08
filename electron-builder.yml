@@ -4,7 +4,6 @@ productName: ClashXUI
 # asar 加密
 asar: true
 extends: null
-icon: electron/window/image/App512.png
 
 # 目录
 directories:
@@ -19,6 +18,7 @@ files:
   - electron/
 
 dmg:
+  icon: electron/window/image/App512.png
   contents:
     - type: link
       path: /Applications
@@ -30,15 +30,20 @@ dmg:
 
 win:
   artifactName: ${name}-${version}.${ext}
+  icon: electron/window/image/App256.png
   target: nsis
 
 mac:
   artifactName: ${name}-${version}.${ext}
-  target: dmg
+  category: public.app-category.developer-tools
+  icon: electron/window/image/App512.png
+  target: dmg  
 
 linux:
   artifactName: ${name}-${version}.${ext}
-  target: deb
+  category: Utility
+  icon: electron/window/image/App256.png
+  target: deb  
 
 nsis: 
   oneClick: false
@@ -46,3 +51,6 @@ nsis:
   allowToChangeInstallationDirectory: true
   # 安装给所有用户
   perMachine: false
+  installerIcon: electron/window/image/App256.png
+  uninstallerIcon: electron/window/image/App256.png
+  deleteAppDataOnUninstall: true
